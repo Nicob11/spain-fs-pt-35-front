@@ -1,13 +1,15 @@
+import { firtsCardtodo } from "../../data/todoCardsData.js";
+
 export const todoCard = `<div class="card mb-5" style="width: 18rem;">
-<div class="card-body">
+<div class="${firtsCardtodo.urgent ? `bg-danger` : ``}">
     <div class="mb-3">
-        <input type="title" class="form-control" name="title" placeholder="TODO">
+    <h3>${firtsCardtodo.title}</h3>
     </div>
     <div class="mb-3">
-        <input type="date" class="form-control" name="date" placeholder="">
+    <p>${firtsCardtodo.date}</p>
     </div>
     <div class="mb-3">
-        <textarea class="form-control" name="description" rows="3"></textarea>
+    <p>${firtsCardtodo.description}</p>
     </div>
     <div class="mb-3">
         <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
@@ -16,5 +18,4 @@ export const todoCard = `<div class="card mb-5" style="width: 18rem;">
         </div>
     </div>
 </div>
-</div>`
-
+</div>`;
